@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETMVC.EF.Web", "ASPNETMVC.EF.Web\ASPNETMVC.EF.Web.csproj", "{F032472C-8C2B-4F94-8744-11A44ED34BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETMVC.EF.Web.Tests", "ASPNETMVC.EF.Web.Tests\ASPNETMVC.EF.Web.Tests.csproj", "{644A62AC-8A7D-47EB-8CBF-4F51D663DCE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETMVC.EF.Domain", "ASPNETMVC.EF.Domain\ASPNETMVC.EF.Domain.csproj", "{82926955-A727-48AB-BC5F-F96618A4A695}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F032472C-8C2B-4F94-8744-11A44ED34BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F032472C-8C2B-4F94-8744-11A44ED34BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F032472C-8C2B-4F94-8744-11A44ED34BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F032472C-8C2B-4F94-8744-11A44ED34BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644A62AC-8A7D-47EB-8CBF-4F51D663DCE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644A62AC-8A7D-47EB-8CBF-4F51D663DCE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644A62AC-8A7D-47EB-8CBF-4F51D663DCE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644A62AC-8A7D-47EB-8CBF-4F51D663DCE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82926955-A727-48AB-BC5F-F96618A4A695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82926955-A727-48AB-BC5F-F96618A4A695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82926955-A727-48AB-BC5F-F96618A4A695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82926955-A727-48AB-BC5F-F96618A4A695}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
