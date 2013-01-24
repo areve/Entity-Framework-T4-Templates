@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASPNETMVC.EF.Domain.Model
+namespace ASPNETMVC.EF.Domain.Testing
 {
     using System;
     using System.Collections.Generic;

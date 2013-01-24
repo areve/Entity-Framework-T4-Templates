@@ -1,5 +1,6 @@
 ﻿using ASPNETMVC.EF.Domain.Architecture;
 using ASPNETMVC.EF.Domain.Model;
+using ASPNETMVC.EF.Domain.Testing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace ASPNETMVC.EF.Domain
 {
-
     public class UnitOfWork<T> : IUnitOfWork where T : IContext, new()
     {
         private readonly IContext _context;
@@ -37,8 +37,6 @@ namespace ASPNETMVC.EF.Domain
         {
             _context.Dispose();
         }
-
-
     }
 
     //public class UnitOfWork : IUnitOfWork 

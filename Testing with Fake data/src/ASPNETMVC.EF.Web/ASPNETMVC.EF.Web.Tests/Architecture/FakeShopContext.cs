@@ -1,5 +1,6 @@
 ﻿using ASPNETMVC.EF.Domain.Architecture;
 using ASPNETMVC.EF.Domain.Model;
+using ASPNETMVC.EF.Domain.Testing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,19 +15,19 @@ namespace ASPNETMVC.EF.Web.Tests.Architecture
         {
             Orders = new OrderFakeDbSet();
         }
-        public System.Data.Entity.IDbSet<Domain.Model.Order> Orders
+        public System.Data.Entity.IDbSet<Order> Orders
         {
             get;
             private set;
         }
 
-        public System.Data.Entity.IDbSet<Domain.Model.Product> Products
+        public System.Data.Entity.IDbSet<Product> Products
         {
             get;
             private set;
         }
 
-        public System.Data.Entity.IDbSet<Domain.Model.User> Users
+        public System.Data.Entity.IDbSet<User> Users
         {
             get;
             private set;

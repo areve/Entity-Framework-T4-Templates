@@ -2,6 +2,7 @@
 using ASPNETMVC.EF.Domain.Architecture;
 using ASPNETMVC.EF.Domain.Model;
 using ASPNETMVC.EF.Domain.Repositories;
+using ASPNETMVC.EF.Domain.Testing;
 using ASPNETMVC.EF.Web.Tests.Architecture;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

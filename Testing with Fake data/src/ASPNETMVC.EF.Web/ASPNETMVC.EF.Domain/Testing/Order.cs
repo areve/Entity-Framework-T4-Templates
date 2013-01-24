@@ -7,22 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASPNETMVC.EF.Domain.Model
+namespace ASPNETMVC.EF.Domain.Testing
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Order
     {
-        public Product()
-        {
-            this.Orders = new HashSet<Order>();
-        }
-    
         public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
+        public Nullable<int> UserId { get; set; }
+        public Nullable<int> ProductId { get; set; }
     
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual User User { get; set; }
     }
 }

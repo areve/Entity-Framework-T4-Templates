@@ -61,43 +61,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Architecture\IContext.cs" />
+    <Compile Include="Architecture\Model\IContext.cs" />
     <Compile Include="Architecture\IOrderRepository.cs" />
     <Compile Include="Architecture\IProductRepository.cs" />
-    <Compile Include="Architecture\IShopContext.cs" />
+    <Compile Include="Architecture\Model\IShopContext.cs" />
     <Compile Include="Architecture\IShopRepository.cs" />
     <Compile Include="Architecture\IUnitOfWork.cs" />
-    <Compile Include="Model\Order.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Product.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\ShopModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ShopModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ShopModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ShopRepository.cs" />
+    <Compile Include="Testing\Dummy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dummy.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\EFBase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\EFBase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\EFBase.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\IContext.cs">
+      <DependentUpon>EFBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\IShopEntities.cs">
+      <DependentUpon>EFBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\MultiOutput.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiOutput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Order.cs">
+      <DependentUpon>EFBase.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Product.cs">
+      <DependentUpon>EFBase.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\ShopEntities.cs">
+      <DependentUpon>EFBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\User.cs">
+      <DependentUpon>EFBase.Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EntityDeploy Include="Model\ShopModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -114,12 +142,27 @@
     <None Include="Model\ShopModel.edmx.diagram">
       <DependentUpon>ShopModel.edmx</DependentUpon>
     </None>
-    <None Include="Model\ShopModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShopModel.edmx</DependentUpon>
-      <LastGenOutput>ShopModel.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
+    <None Include="Testing\Dummy.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dummy.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\EFBase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFBase.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\EFBase.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFBase.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\EFBase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFBase.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\MultiOutput.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiOutput.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

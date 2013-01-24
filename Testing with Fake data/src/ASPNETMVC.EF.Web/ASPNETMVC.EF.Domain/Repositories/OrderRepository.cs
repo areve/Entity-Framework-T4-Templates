@@ -1,4 +1,5 @@
 ﻿using ASPNETMVC.EF.Domain.Architecture;
+using ASPNETMVC.EF.Domain.Testing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace ASPNETMVC.EF.Domain
 
         public void NewOrder(int userId, int productId)
         {
-            _context.Orders.Add(new Model.Order() { ProductId = productId, UserId = userId });
+            _context.Orders.Add(new Order() { ProductId = productId, UserId = userId });
         }
 
      

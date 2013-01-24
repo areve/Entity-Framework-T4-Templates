@@ -1,5 +1,6 @@
 ﻿using ASPNETMVC.EF.Domain.Architecture;
 using ASPNETMVC.EF.Domain.Model;
+using ASPNETMVC.EF.Domain.Testing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
