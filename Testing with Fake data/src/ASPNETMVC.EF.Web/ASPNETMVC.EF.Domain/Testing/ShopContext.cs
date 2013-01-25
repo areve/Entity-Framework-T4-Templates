@@ -12,10 +12,10 @@
             using System.Data.Entity;
             using System.Data.Entity.Infrastructure;
             
-            public partial class ShopEntities : DbContext, IShopEntities
+            public partial class ShopContext : DbContext, IShopContext
             {
             
-            	public ShopEntities() : base("name=ShopEntities")
+            	public ShopContext() : base("name=ShopEntities")
                 {
                 }
             	protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,6 +26,16 @@
             	public IDbSet<Order> Orders { get; set; }
             	public IDbSet<Product> Products { get; set; }
             	public IDbSet<User> Users { get; set; }
+            
+            	        public void SetModified(object entity)
+                    {
+                        Entry(entity).State = System.Data.EntityState.Modified;
+                    }
+            
+                    public void SetAdded(object entity)
+                    {
+                        Entry(entity).State = System.Data.EntityState.Added;
+                    }
                 
             
             }

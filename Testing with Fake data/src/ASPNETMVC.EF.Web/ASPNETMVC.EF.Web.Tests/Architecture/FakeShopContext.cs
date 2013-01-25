@@ -9,48 +9,48 @@ using System.Threading.Tasks;
 
 namespace ASPNETMVC.EF.Web.Tests.Architecture
 {
-    public class FakeShopContext : IShopContext
-    {
-        public FakeShopContext()
-        {
-            Orders = new OrderFakeDbSet();
-        }
-        public System.Data.Entity.IDbSet<Order> Orders
-        {
-            get;
-            private set;
-        }
+    //public class FakeShopContext : IShopContext
+    //{
+    //    public FakeShopContext()
+    //    {
+    //        Orders = new OrderFakeDbSet();
+    //    }
+    //    public System.Data.Entity.IDbSet<Order> Orders
+    //    {
+    //        get;
+    //        private set;
+    //    }
 
-        public System.Data.Entity.IDbSet<Product> Products
-        {
-            get;
-            private set;
-        }
+    //    public System.Data.Entity.IDbSet<Product> Products
+    //    {
+    //        get;
+    //        private set;
+    //    }
 
-        public System.Data.Entity.IDbSet<User> Users
-        {
-            get;
-            private set;
-        }
+    //    public System.Data.Entity.IDbSet<User> Users
+    //    {
+    //        get;
+    //        private set;
+    //    }
 
-        public int SaveChanges()
-        {
-            return 0;
-        }
+    //    public int SaveChanges()
+    //    {
+    //        return 0;
+    //    }
 
-        public void SetModified(object entity)
-        {
+    //    public void SetModified(object entity)
+    //    {
            
-        }
+    //    }
 
-        public void SetAdded(object entity)
-        {
-            throw new NotImplementedException();
-        }
+    //    public void SetAdded(object entity)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
 
-        public void Dispose()
-        {
+    //    public void Dispose()
+    //    {
             
-        }
-    }
+    //    }
+    //}
 }

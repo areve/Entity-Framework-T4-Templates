@@ -2,6 +2,7 @@
 using ASPNETMVC.EF.Domain.Testing;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,4 +17,7 @@ namespace ASPNETMVC.EF.Web.Tests.Architecture
             return this.SingleOrDefault(o => o.id == value);
         }
     }
+
+    
+
 }

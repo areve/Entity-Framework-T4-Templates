@@ -12,7 +12,7 @@
         using System.Data.Entity;
         using System.Data.Entity.Infrastructure;
         
-        public partial interface IShopEntities
+        public partial interface IShopContext : IContext
         {
         
         	

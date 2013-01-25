@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ASPNETMVC.EF.Domain.Architecture
 {
-    public interface IShopContext : IContext
-    {
-        IDbSet<Order> Orders { get;  }
-        IDbSet<Product> Products { get;  }
-        IDbSet<User> Users { get;  }
-    }
+//    public interface IShopContext : IContext
+//    {
+//        IDbSet<Order> Orders { get;  }
+//        IDbSet<Product> Products { get;  }
+//        IDbSet<User> Users { get;  }
+//    }
 }

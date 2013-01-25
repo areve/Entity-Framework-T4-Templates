@@ -56,6 +56,6 @@ namespace ASPNETMVC.EF.Web.Tests
                 Assert.AreEqual(repo.GetOrdersByCustomer(customer).ToList().Count, 2);
             }
         }
-       
+ 
     }
 }

@@ -12,8 +12,7 @@ namespace ASPNETMVC.EF.Web.Tests.Architecture
 {
     public abstract class FakeDbSet<T> : IDbSet<T> where T : class, new()
     {
-        public FakeDbSet()
-            : this(Enumerable.Empty<T>())
+        public FakeDbSet() : this(Enumerable.Empty<T>())
         {
         }
 

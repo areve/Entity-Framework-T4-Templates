@@ -81,11 +81,6 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ShopRepository.cs" />
-    <Compile Include="Testing\Dummy.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dummy.tt</DependentUpon>
-    </Compile>
     <Compile Include="Testing\EFBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,10 +96,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EFBase.Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Testing\EFBase.Repositories.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\EFBase.Settings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.Settings.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\EFBase.Testing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFBase.Testing.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\FakeDbSet.cs">
+      <DependentUpon>EFBase.Testing.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\FakeEntitiesDbSet.cs">
+      <DependentUpon>EFBase.Testing.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\FakeShopContext.cs">
+      <DependentUpon>EFBase.Testing.tt</DependentUpon>
+    </Compile>
     <Compile Include="Testing\IContext.cs">
       <DependentUpon>EFBase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Testing\IShopEntities.cs">
+    <Compile Include="Testing\IShopContext.cs">
       <DependentUpon>EFBase.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Testing\MultiOutput.cs">
@@ -118,7 +137,7 @@
     <Compile Include="Testing\Product.cs">
       <DependentUpon>EFBase.Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Testing\ShopEntities.cs">
+    <Compile Include="Testing\ShopContext.cs">
       <DependentUpon>EFBase.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Testing\User.cs">
@@ -143,9 +162,17 @@
       <DependentUpon>ShopModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Testing\Dummy.tt">
+    <None Include="Testing\EFBase.Repositories.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Dummy.cs</LastGenOutput>
+      <LastGenOutput>EFBase.Repositories.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\EFBase.Settings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFBase.Settings.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\EFBase.Testing.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFBase.Testing.cs</LastGenOutput>
     </None>
     <None Include="Testing\EFBase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
