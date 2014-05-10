@@ -19,6 +19,8 @@
 
     void DeleteOldOutputs()
     {
+    	if (Host.GetType().ToString() == "Microsoft.VisualStudio.TextTemplating.CommandLine.CommandLineHost") return;
+
         EnvDTE.ProjectItem templateProjectItem = __getTemplateProjectItem();
         foreach (EnvDTE.ProjectItem childProjectItem in templateProjectItem.ProjectItems)
         {
@@ -36,9 +38,11 @@
         string output = __engine.ProcessTemplate(template, Host);
         File.WriteAllText(outputFilePath, output);
 
-        EnvDTE.ProjectItem templateProjectItem = __getTemplateProjectItem();
-        templateProjectItem.ProjectItems.AddFromFile(outputFilePath);
-
+		if (Host.GetType().ToString() != "Microsoft.VisualStudio.TextTemplating.CommandLine.CommandLineHost") {
+            EnvDTE.ProjectItem templateProjectItem = __getTemplateProjectItem();
+            templateProjectItem.ProjectItems.AddFromFile(outputFilePath);
+        }
+        
         __savedOutputs.Add(outputFileName);
     }
 
@@ -49,6 +53,8 @@
 
         File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString());
         this.GenerationEnvironment = new StringBuilder();
+
+		if (Host.GetType().ToString() == "Microsoft.VisualStudio.TextTemplating.CommandLine.CommandLineHost") return;
 
         EnvDTE.ProjectItem templateProjectItem = __getTemplateProjectItem();
         templateProjectItem.ProjectItems.AddFromFile(outputFilePath);
